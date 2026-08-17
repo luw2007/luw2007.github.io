@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luw2007-blog DEV - cgroup</title><link>https://luw2007.github.io/</link><description/><atom:link href="https://luw2007.github.io/feeds/cgroup.rss.xml" rel="self"/><lastBuildDate>Wed, 09 Jan 2013 00:00:00 +0800</lastBuildDate><item><title>认识cgroup和 lxc</title><link>https://luw2007.github.io/cgroup-lxc.html</link><description>&lt;h3&gt;引子&lt;/h3&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>luw2007-blog DEV - linux containers</title><link>https://luw2007.github.io/</link><description/><atom:link href="https://luw2007.github.io/feeds/linux-containers.rss.xml" rel="self"/><lastBuildDate>Wed, 09 Jan 2013 00:00:00 +0800</lastBuildDate><item><title>认识cgroup和 lxc</title><link>https://luw2007.github.io/cgroup-lxc.html</link><description>&lt;h3&gt;引子&lt;/h3&gt;
 &lt;p&gt;[CPyUG] 对于python的sandbox,有什么好的方案吗？
 由python的沙箱引出虚拟化中的两个名词lxc和cgroup。&lt;/p&gt;
 &lt;h2&gt;cgroup(control groups)&lt;/h2&gt;

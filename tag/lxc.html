@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>luw2007-blog <em>DEV<em></title>
+    <title>luw2007-blog DEV - Lxc</title>
     <meta name="description" content="">
     <meta name="author" content="luw2007">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="../theme/html5.js"></script>
-    <![endif]-->
 
     <!-- Le styles -->
-    <link href="../theme/bootstrap.min.css" rel="stylesheet">
-    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="../theme/local.css" rel="stylesheet">
-    <link href="../theme/pygments.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/local.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/pygments.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate" title="luw2007-blog DEV" type="application/atom+xml">
+        <link href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate" title="luw2007-blog DEV" type="application/rss+xml">
 
 </head>
 
@@ -32,15 +32,15 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="..">luw2007-blog <em>DEV<em></a>
+        <a class="brand" href="https://luw2007.github.io">luw2007-blog DEV</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-                    
-                            <li><a href="../pages/About.html">About me</a></li>
-                        </ul>
+
+            <li><a href="https://luw2007.github.io/pages/About.html">About me</a></li>
+        </ul>
         </div>
-        
+
     </div>
     </div>
 </div>
@@ -50,30 +50,30 @@
     <div class="row">
 
         <div class="span9">
-                
-
-        
 
 
-    <div class='article'>
+
+
+
+    <div class="article">
         <div class="content-title">
-            <a href="../cgroup-lxc.html"><h1>认识cgroup和 lxc</h1></a>
-            01-09-2013
+            <h1><a href="https://luw2007.github.io/cgroup-lxc.html">认识cgroup和 lxc</a></h1>
+01-09-2013
 
-by <a class="url fn" href="../author/luw2007.html">luw2007</a>
- 
+by <a class="url fn" href="https://luw2007.github.io/author/luw2007.html">luw2007</a>
 
 
- 
+
+
         </div>
-        
+
         <div><h3>引子</h3>
 <p>[CPyUG] 对于python的sandbox,有什么好的方案吗？
 由python的沙箱引出虚拟化中的两个名词lxc和cgroup。</p>
 <h2>cgroup(control groups)</h2>
 <ul>
-<li><a href="http://en.wikipedia.org/wiki/cgroup">cgroup</a>, wikipedia 中的定义</li>
-<li><a href="http://www.kernel.org/doc/Documentation/cgroups/">http://www.kernel.org/doc/Documentation/cgroups/</a>, cgroups 官方文档</li>
+<li><a href="https://en.wikipedia.org/wiki/Cgroups">cgroup</a>，Wikipedia 中的定义</li>
+<li><a href="https://docs.kernel.org/admin-guide/cgroup-v2.html">Linux cgroup v2 官方文档</a></li>
 <li><a href="http://www.cnblogs.com/lisperl/tag/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF/">http://www.cnblogs.com/lisperl/tag/虚拟化技术</a>, 这里对官方文档做了翻译</li>
 </ul>
 <h2>Lxc(LinuX Containers)</h2>
@@ -81,7 +81,7 @@ by <a class="url fn" href="../author/luw2007.html">luw2007</a>
 <li><a href="http://en.wikipedia.org/wiki/Lxc">lxc</a>, wikipedia 中的定义</li>
 <li><a href="http://wiki.archlinux.org/index.php/Linux_Containers">Linux Containers - ArchWiki</a></li>
 <li><a href="https://help.ubuntu.com/community/LXC">LXC - Community Ubuntu Documentation</a>, See also</li>
-<li><a href="http://lxc.teegra.net/">How to LXC - this is one of the best documents available</a>, 比较详细的lxc 的介绍手册</li>
+<li><a href="https://linuxcontainers.org/lxc/documentation/">LXC 官方文档</a></li>
 <li><a href="wiki.gentoo.org/wiki/LXC">LXC - Gentoo Wiki</a></li>
 <li><a href="http://wiki.debian.org/LXC">LXC - Debian Wiki</a></li>
 <li><a href="http://en.opensuse.org/LXC">LXC - openSUSE</a></li>
@@ -113,77 +113,78 @@ by <a class="url fn" href="../author/luw2007.html">luw2007</a>
 <li><a href="https://access.redhat.com/knowledge/docs/zh-CN/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/">https://access.redhat.com/knowledge/docs/zh-CN/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/</a>, 'RHEL6的资源管理指南'。 其中主要介绍cgrous, 由于是针对rhel 系统的。对于非red hat用户建议主要看看概念和机制。</li>
 <li><a href="http://agiletesting.blogspot.com/2011/08/anybody-using-lxc-or-openvz-in.html">http://agiletesting.blogspot.com/2011/08/anybody-using-lxc-or-openvz-in.html</a>, twitter 上lxc 杂谈</li>
 </ul></div>
-        <hr />
+        <hr>
     </div>
-		
-            <div class="pagination">
+
+<div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="../tag/lxc.html">1</a></li>
+    <li class="active"><a href="https://luw2007.github.io/tag/lxc.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
 </ul>
-</div>    
- 
-  
+</div>
+
+
         </div>
-        
+
         <div class="span3">
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
                 Site
                 </li>
-            
-                <li><a href="../archives.html">Archives</a>
-                <li><a href="../tags.html">Tags</a>
-                <li><a href="http://luw2007.github.com/" rel="alternate">Atom feed</a></li>
-                                <li><a href="http://luw2007.github.com/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
-                            </ul>
-            </div>
+
+                <li><a href="https://luw2007.github.io/archives.html">Archives</a></li>
+                <li><a href="https://luw2007.github.io/tags.html">Tags</a></li>
 
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                                <li><a href="../category/dev.html">Dev</a></li>
-                                <li><a href="../category/blog.html">blog</a></li>
-                                <li><a href="../category/linux.html">linux</a></li>
-                                   
+
+                <li><a href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+                <li><a href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
+
             </ul>
             </div>
-            
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="https://luw2007.github.io/category/blog.html">blog</a></li>
+                <li><a href="https://luw2007.github.io/category/dev.html">Dev</a></li>
+                <li><a href="https://luw2007.github.io/category/linux.html">linux</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
                 Links
                 </li>
-            
-                            <li><a href="http://python.org">python</a></li>
-                            <li><a href="http://douban.com">douban.com</a></li>
-                            <li><a href="http://42qu.com">42qu.com</a></li>
-                        </ul>
-            </div>
-            
 
-            
-        </div>  
-    </div>     </div> 
+                <li><a href="https://python.org">Python</a></li>
+                <li><a href="https://douban.com">Douban</a></li>
+            </ul>
+            </div>
+
+
+
+        </div>
+    </div>     </div>
 <footer>
-<br />
-<p><a href="..">luw2007-blog <em>DEV<em></a> &copy; luw2007 2012</p>
+<br>
+<p><a href="https://luw2007.github.io">luw2007-blog DEV</a> &copy; luw2007 2013</p>
 </footer>
 
 </div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
- 
+
 </body>
 </html>

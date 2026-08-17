@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>luw2007-blog DEV</title><link href="http://luw2007.github.com/" rel="alternate"></link><link href="http://luw2007.github.com/feeds/linux.atom.xml" rel="self"></link><id>http://luw2007.github.com/</id><updated>2013-01-09T00:00:00+08:00</updated><entry><title>认识cgroup和 lxc</title><link href="http://luw2007.github.com/cgroup-lxc.html" rel="alternate"></link><updated>2013-01-09T00:00:00+08:00</updated><author><name>luw2007</name></author><id>tag:luw2007.github.com,2013-01-09:cgroup-lxc.html</id><summary type="html">&lt;h3&gt;引子&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>luw2007-blog DEV - linux</title><link href="https://luw2007.github.io/" rel="alternate"/><link href="https://luw2007.github.io/feeds/linux.atom.xml" rel="self"/><id>https://luw2007.github.io/</id><updated>2013-01-09T00:00:00+08:00</updated><entry><title>认识cgroup和 lxc</title><link href="https://luw2007.github.io/cgroup-lxc.html" rel="alternate"/><published>2013-01-09T00:00:00+08:00</published><updated>2013-01-09T00:00:00+08:00</updated><author><name>luw2007</name></author><id>tag:luw2007.github.io,2013-01-09:/cgroup-lxc.html</id><summary type="html">&lt;h3&gt;引子&lt;/h3&gt;
 &lt;p&gt;[CPyUG] 对于python的sandbox,有什么好的方案吗？
 由python的沙箱引出虚拟化中的两个名词lxc和cgroup。&lt;/p&gt;
 &lt;h2&gt;cgroup(control groups)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/cgroup"&gt;cgroup&lt;/a&gt;, wikipedia 中的定义&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.kernel.org/doc/Documentation/cgroups/"&gt;http://www.kernel.org/doc/Documentation/cgroups/&lt;/a&gt;, cgroups 官方文档&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Cgroups"&gt;cgroup&lt;/a&gt;，Wikipedia 中的定义&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.kernel.org/admin-guide/cgroup-v2.html"&gt;Linux cgroup v2 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/lisperl/tag/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF/"&gt;http://www.cnblogs.com/lisperl/tag/虚拟化技术&lt;/a&gt;, 这里对官方文档 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;引子&lt;/h3&gt;
+&lt;p&gt;[CPyUG] 对于python的sandbox,有什么好的方案吗？
+由python的沙箱引出虚拟化中的两个名词lxc和cgroup。&lt;/p&gt;
+&lt;h2&gt;cgroup(control groups)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Cgroups"&gt;cgroup&lt;/a&gt;，Wikipedia 中的定义&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.kernel.org/admin-guide/cgroup-v2.html"&gt;Linux cgroup v2 官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cnblogs.com/lisperl/tag/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AF/"&gt;http://www.cnblogs.com/lisperl/tag/虚拟化技术&lt;/a&gt;, 这里对官方文档做了翻译&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Lxc(LinuX Containers)&lt;/h2&gt;
@@ -13,7 +20,7 @@
 &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Lxc"&gt;lxc&lt;/a&gt;, wikipedia 中的定义&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://wiki.archlinux.org/index.php/Linux_Containers"&gt;Linux Containers - ArchWiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.ubuntu.com/community/LXC"&gt;LXC - Community Ubuntu Documentation&lt;/a&gt;, See also&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://lxc.teegra.net/"&gt;How to LXC - this is one of the best documents available&lt;/a&gt;, 比较详细的lxc 的介绍手册&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://linuxcontainers.org/lxc/documentation/"&gt;LXC 官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="wiki.gentoo.org/wiki/LXC"&gt;LXC - Gentoo Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://wiki.debian.org/LXC"&gt;LXC - Debian Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://en.opensuse.org/LXC"&gt;LXC - openSUSE&lt;/a&gt;&lt;/li&gt;
@@ -44,7 +51,11 @@
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/karmic/man5/lxc.conf.5.html"&gt;http://manpages.ubuntu.com/manpages/karmic/man5/lxc.conf.5.html&lt;/a&gt;, lxc.conf 配置帮助&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://access.redhat.com/knowledge/docs/zh-CN/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/"&gt;https://access.redhat.com/knowledge/docs/zh-CN/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/&lt;/a&gt;, 'RHEL6的资源管理指南'。 其中主要介绍cgrous, 由于是针对rhel 系统的。对于非red hat用户建议主要看看概念和机制。&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://agiletesting.blogspot.com/2011/08/anybody-using-lxc-or-openvz-in.html"&gt;http://agiletesting.blogspot.com/2011/08/anybody-using-lxc-or-openvz-in.html&lt;/a&gt;, twitter 上lxc 杂谈&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Lxc"></category><category term="cgroup"></category><category term="linux containers"></category><category term="control groups"></category></entry><entry><title>bbcp,替代scp的多线程传输工具</title><link href="http://luw2007.github.com/bbcp-a-muliti-scp-tool.html" rel="alternate"></link><updated>2013-01-07T00:00:00+08:00</updated><author><name>luw2007</name></author><id>tag:luw2007.github.com,2013-01-07:bbcp-a-muliti-scp-tool.html</id><summary type="html">&lt;h3&gt;选用bbcp替代scp的原因&lt;/h3&gt;
+&lt;/ul&gt;</content><category term="linux"/><category term="Lxc"/><category term="cgroup"/><category term="linux containers"/><category term="control groups"/></entry><entry><title>bbcp,替代scp的多线程传输工具</title><link href="https://luw2007.github.io/bbcp-a-muliti-scp-tool.html" rel="alternate"/><published>2013-01-07T00:00:00+08:00</published><updated>2013-01-07T00:00:00+08:00</updated><author><name>luw2007</name></author><id>tag:luw2007.github.io,2013-01-07:/bbcp-a-muliti-scp-tool.html</id><summary type="html">&lt;h3&gt;选用bbcp替代scp的原因&lt;/h3&gt;
+&lt;p&gt;这两天用scp往服务器上传数据，scp传输速度太慢。特别是网络不太稳定的时候，速度非常慢。惨不忍睹。
+所以想找个替代工具。&lt;/p&gt;
+&lt;h3&gt;使用中遇到的问题&lt;/h3&gt;
+&lt;p&gt;如何好 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;选用bbcp替代scp的原因&lt;/h3&gt;
 &lt;p&gt;这两天用scp往服务器上传数据，scp传输速度太慢。特别是网络不太稳定的时候，速度非常慢。惨不忍睹。
 所以想找个替代工具。&lt;/p&gt;
 &lt;h3&gt;使用中遇到的问题&lt;/h3&gt;
@@ -65,60 +76,5 @@
 &lt;/ol&gt;
 &lt;h3&gt;bbcp的相关网页&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.slac.stanford.edu/~abh/bbcp/"&gt;官方文档 http://www.slac.stanford.edu/~abh/bbcp/&lt;/a&gt;, 主要介绍bbcp 的使用方法，并提供源码地址和二进制文件下载。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.slac.stanford.edu/~abh/bbcp/bbcp.git"&gt;源码&lt;/a&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;http:&lt;/span&gt;&lt;span class="sr"&gt;//&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slac&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stanford&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;edu&lt;/span&gt;&lt;span class="sr"&gt;/~abh/&lt;/span&gt;&lt;span class="n"&gt;bbcp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bbcp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.slac.stanford.edu/~abh/bbcp/bin/"&gt;可执行文件官方下载 http://www.slac.stanford.edu/~abh/bbcp/bin/&lt;/a&gt;, 目前仅提供一下平台&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;amd64_darwin_100&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;       &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;
-&lt;span class="n"&gt;amd64_linux26&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;          &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Apr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;43&lt;/span&gt;
-&lt;span class="n"&gt;amd64_rhel50&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;           &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;
-&lt;span class="n"&gt;amd64_rhel60&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;           &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mo"&gt;01&lt;/span&gt;
-&lt;span class="n"&gt;i386_linux26&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;           &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;May&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;56&lt;/span&gt;
-&lt;span class="n"&gt;i386_rhel50&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;            &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;
-&lt;span class="n"&gt;i386_rhel60&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;            &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;
-&lt;span class="n"&gt;sun4x_510&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;              &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Jan&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;
-&lt;span class="n"&gt;sunx86_510&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;             &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Jan&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;
-&lt;span class="n"&gt;x86_darwin_100&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;         &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Aug&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://moo.nac.uci.edu/~hjm/HOWTO_move_data.html"&gt;HOWTO move data&lt;/a&gt;, 介绍如何移动数据， 其中介绍到bbcp，以及与rsync的区别， 以下引用的文章目录&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Executive Summary&lt;/li&gt;
-&lt;li&gt;Compression &amp;amp; Encryption&lt;/li&gt;
-&lt;li&gt;Avoiding data transfer&lt;ol&gt;
-&lt;li&gt;kdirstat&lt;/li&gt;
-&lt;li&gt;rsync&lt;/li&gt;
-&lt;li&gt;Unison&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Streaming Data Transfer&lt;ol&gt;
-&lt;li&gt;bbcp&lt;/li&gt;
-&lt;li&gt;bbftp&lt;/li&gt;
-&lt;li&gt;Fast Data Transfer (fdt)&lt;/li&gt;
-&lt;li&gt;GridFTP&lt;/li&gt;
-&lt;li&gt;Globus Online&lt;/li&gt;
-&lt;li&gt;netcat&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://pcbunn.cithep.caltech.edu/bbcp/using_bbcp.htm"&gt;Using BBCP&lt;/a&gt;， 比较详细的介绍&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://imysql.cn/2008_12_08_using_bbcp_instead_scp"&gt;用 bbcp 取代 scp&lt;/a&gt;，上篇 “Using BBCP” 的中文译文(非全文翻译)&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.nersc.gov/users/data-and-networking/transferring-data/bbcp/"&gt;Using bbcp At NERSC&lt;/a&gt;, 简单介绍&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://hutong236.i.sohu.com/blog/view/212355791.htm"&gt;bbcp测试&lt;/a&gt;， 国人简单的测试&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="bbcp"></category><category term="scp"></category><category term="p2p"></category></entry></feed>
+&lt;li&gt;&lt;a href="https://github.com/bbcp"&gt;SLAC 官方 bbcp GitHub 组织&lt;/a&gt;，提供源码和当前项目入口。&lt;/li&gt;
+&lt;/ul&gt;</content><category term="linux"/><category term="bbcp"/><category term="scp"/><category term="p2p"/></entry></feed>

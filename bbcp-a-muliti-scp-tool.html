@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>luw2007-blog <em>DEV<em></title>
+    <title>luw2007-blog DEV - bbcp,替代scp的多线程传输工具</title>
     <meta name="description" content="">
     <meta name="author" content="luw2007">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="./theme/html5.js"></script>
-    <![endif]-->
 
     <!-- Le styles -->
-    <link href="./theme/bootstrap.min.css" rel="stylesheet">
-    <link href="./theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="./theme/local.css" rel="stylesheet">
-    <link href="./theme/pygments.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/local.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/pygments.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate" title="luw2007-blog DEV" type="application/atom+xml">
+        <link href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate" title="luw2007-blog DEV" type="application/rss+xml">
 
 </head>
 
@@ -32,15 +32,15 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href=".">luw2007-blog <em>DEV<em></a>
+        <a class="brand" href="https://luw2007.github.io">luw2007-blog DEV</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-                    
-                            <li><a href="./pages/About.html">About me</a></li>
-                        </ul>
+
+            <li><a href="https://luw2007.github.io/pages/About.html">About me</a></li>
+        </ul>
         </div>
-        
+
     </div>
     </div>
 </div>
@@ -50,17 +50,17 @@
     <div class="row">
 
         <div class="span9">
-            <div class='article'>
+    <div class="article">
         <div class="content-title">
             <h1>bbcp,替代scp的多线程传输工具</h1>
-            01-07-2013
+01-07-2013
 
-by <a class="url fn" href="./author/luw2007.html">luw2007</a>
- 
+by <a class="url fn" href="https://luw2007.github.io/author/luw2007.html">luw2007</a>
+
 
 
         </div>
-	
+
         <div><h3>选用bbcp替代scp的原因</h3>
 <p>这两天用scp往服务器上传数据，scp传输速度太慢。特别是网络不太稳定的时候，速度非常慢。惨不忍睹。
 所以想找个替代工具。</p>
@@ -82,125 +82,69 @@ by <a class="url fn" href="./author/luw2007.html">luw2007</a>
 </ol>
 <h3>bbcp的相关网页</h3>
 <ul>
-<li>
-<p><a href="http://www.slac.stanford.edu/~abh/bbcp/">官方文档 http://www.slac.stanford.edu/~abh/bbcp/</a>, 主要介绍bbcp 的使用方法，并提供源码地址和二进制文件下载。</p>
-<ul>
-<li>
-<p><a href="http://www.slac.stanford.edu/~abh/bbcp/bbcp.git">源码</a></p>
-<div class="codehilite"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">http:</span><span class="sr">//</span><span class="n">www</span><span class="o">.</span><span class="n">slac</span><span class="o">.</span><span class="n">stanford</span><span class="o">.</span><span class="n">edu</span><span class="sr">/~abh/</span><span class="n">bbcp</span><span class="o">/</span><span class="n">bbcp</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-
-
-</li>
-<li>
-<p><a href="http://www.slac.stanford.edu/~abh/bbcp/bin/">可执行文件官方下载 http://www.slac.stanford.edu/~abh/bbcp/bin/</a>, 目前仅提供一下平台</p>
-<div class="codehilite"><pre><span class="n">amd64_darwin_100</span><span class="o">/</span>       <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mi">49</span>
-<span class="n">amd64_linux26</span><span class="o">/</span>          <span class="mi">24</span><span class="o">-</span><span class="n">Apr</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">14</span><span class="p">:</span><span class="mi">43</span>
-<span class="n">amd64_rhel50</span><span class="o">/</span>           <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mi">49</span>
-<span class="n">amd64_rhel60</span><span class="o">/</span>           <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mo">01</span>
-<span class="n">i386_linux26</span><span class="o">/</span>           <span class="mi">19</span><span class="o">-</span><span class="n">May</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">08</span><span class="p">:</span><span class="mi">56</span>
-<span class="n">i386_rhel50</span><span class="o">/</span>            <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mi">48</span>
-<span class="n">i386_rhel60</span><span class="o">/</span>            <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mi">49</span>
-<span class="n">sun4x_510</span><span class="o">/</span>              <span class="mi">30</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">23</span><span class="p">:</span><span class="mi">12</span>
-<span class="n">sunx86_510</span><span class="o">/</span>             <span class="mi">12</span><span class="o">-</span><span class="n">Jan</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">18</span><span class="p">:</span><span class="mi">19</span>
-<span class="n">x86_darwin_100</span><span class="o">/</span>         <span class="mi">17</span><span class="o">-</span><span class="n">Aug</span><span class="o">-</span><span class="mi">2012</span> <span class="mi">19</span><span class="p">:</span><span class="mi">49</span>
-</pre></div>
-
-
-</li>
-</ul>
-</li>
-<li>
-<p><a href="http://moo.nac.uci.edu/~hjm/HOWTO_move_data.html">HOWTO move data</a>, 介绍如何移动数据， 其中介绍到bbcp，以及与rsync的区别， 以下引用的文章目录</p>
-<ol>
-<li>Executive Summary</li>
-<li>Compression &amp; Encryption</li>
-<li>Avoiding data transfer<ol>
-<li>kdirstat</li>
-<li>rsync</li>
-<li>Unison</li>
-</ol>
-</li>
-<li>Streaming Data Transfer<ol>
-<li>bbcp</li>
-<li>bbftp</li>
-<li>Fast Data Transfer (fdt)</li>
-<li>GridFTP</li>
-<li>Globus Online</li>
-<li>netcat</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<p><a href="http://pcbunn.cithep.caltech.edu/bbcp/using_bbcp.htm">Using BBCP</a>， 比较详细的介绍</p>
-</li>
-<li><a href="http://imysql.cn/2008_12_08_using_bbcp_instead_scp">用 bbcp 取代 scp</a>，上篇 “Using BBCP” 的中文译文(非全文翻译)</li>
-<li><a href="http://www.nersc.gov/users/data-and-networking/transferring-data/bbcp/">Using bbcp At NERSC</a>, 简单介绍</li>
-<li><a href="http://hutong236.i.sohu.com/blog/view/212355791.htm">bbcp测试</a>， 国人简单的测试</li>
+<li><a href="https://github.com/bbcp">SLAC 官方 bbcp GitHub 组织</a>，提供源码和当前项目入口。</li>
 </ul></div>
-	
+
         <hr>
-    	   
-        <h2>Comments</h2>
-	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="luw2007">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	    </div>
+
+    </div>
         </div>
-        
+
         <div class="span3">
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
                 Site
                 </li>
-            
-                <li><a href="./archives.html">Archives</a>
-                <li><a href="./tags.html">Tags</a>
-                <li><a href="http://luw2007.github.com/" rel="alternate">Atom feed</a></li>
-                                <li><a href="http://luw2007.github.com/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
-                            </ul>
-            </div>
+
+                <li><a href="https://luw2007.github.io/archives.html">Archives</a></li>
+                <li><a href="https://luw2007.github.io/tags.html">Tags</a></li>
 
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                                <li><a href="./category/dev.html">Dev</a></li>
-                                <li><a href="./category/blog.html">blog</a></li>
-                                <li><a href="./category/linux.html">linux</a></li>
-                                   
+
+                <li><a href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+                <li><a href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
+
             </ul>
             </div>
-            
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="https://luw2007.github.io/category/blog.html">blog</a></li>
+                <li><a href="https://luw2007.github.io/category/dev.html">Dev</a></li>
+                <li><a href="https://luw2007.github.io/category/linux.html">linux</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
                 Links
                 </li>
-            
-                            <li><a href="http://python.org">python</a></li>
-                            <li><a href="http://douban.com">douban.com</a></li>
-                            <li><a href="http://42qu.com">42qu.com</a></li>
-                        </ul>
-            </div>
-            
 
-            
-        </div>  
-    </div>     </div> 
+                <li><a href="https://python.org">Python</a></li>
+                <li><a href="https://douban.com">Douban</a></li>
+            </ul>
+            </div>
+
+
+
+        </div>
+    </div>     </div>
 <footer>
-<br />
-<p><a href=".">luw2007-blog <em>DEV<em></a> &copy; luw2007 2012</p>
+<br>
+<p><a href="https://luw2007.github.io">luw2007-blog DEV</a> &copy; luw2007 2013</p>
 </footer>
 
 </div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
- 
+
 </body>
 </html>

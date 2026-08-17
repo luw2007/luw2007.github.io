@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>luw2007-blog DEV - bbcp</title>
+    <title>luw2007-blog DEV - Authors</title>
     <meta name="description" content="">
     <meta name="author" content="luw2007">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,61 +50,10 @@
     <div class="row">
 
         <div class="span9">
-
-
-
-
-
-    <div class="article">
-        <div class="content-title">
-            <h1><a href="https://luw2007.github.io/bbcp-a-muliti-scp-tool.html">bbcp,替代scp的多线程传输工具</a></h1>
-01-07-2013
-
-by <a class="url fn" href="https://luw2007.github.io/author/luw2007.html">luw2007</a>
-
-
-
-
-        </div>
-
-        <div><h3>选用bbcp替代scp的原因</h3>
-<p>这两天用scp往服务器上传数据，scp传输速度太慢。特别是网络不太稳定的时候，速度非常慢。惨不忍睹。
-所以想找个替代工具。</p>
-<h3>使用中遇到的问题</h3>
-<p>如何好用， 比scp 快多少就不测试了。这里说说遇到问题。</p>
-<ol>
-<li>需要目标服务器上同样放置bbcp程序。如果有admin权限，比较好办。</li>
-<li>防火墙。由于采用了多个端口同时传输数据， 所以需要开发至少8个端口用于传输数据。<ul>
-<li>目标服务器在公网，并且开放端口，直接传输；</li>
-<li>目标服务器在内网，<ul>
-<li>防火墙映射端口，直接传输。</li>
-<li>目标服务器无法映射端口，本地开放端口或者可以映射端口， 可以使用-Z(同--port 此为12.08.17版本中加入，如果无法使用， 请使用 --help 查看版本) 传输。</li>
-<li>本地也无法映射端口。那就没辙了。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>连接目标服务器ssh的端口貌似没法修改, 默认22。 但是好多服务器都修改了这个端口。（提供了-S， 但是不会设置）</li>
-</ol>
-<h3>bbcp的相关网页</h3>
-<ul>
-<li><a href="https://github.com/bbcp">SLAC 官方 bbcp GitHub 组织</a>，提供源码和当前项目入口。</li>
-</ul></div>
-        <hr>
-    </div>
-
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://luw2007.github.io/tag/bbcp.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>
-
-
+    <h2>Authors on luw2007-blog DEV</h2>
+    <ul>
+            <li><a href="https://luw2007.github.io/author/luw2007.html">luw2007</a> (9)</li>
+    </ul>
         </div>
 
         <div class="span3">

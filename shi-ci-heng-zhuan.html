@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>luw2007-blog <em>DEV<em></title>
+    <title>luw2007-blog DEV - 莫工厂的面试题之一古诗横转</title>
     <meta name="description" content="">
     <meta name="author" content="luw2007">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="./theme/html5.js"></script>
-    <![endif]-->
 
     <!-- Le styles -->
-    <link href="./theme/bootstrap.min.css" rel="stylesheet">
-    <link href="./theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="./theme/local.css" rel="stylesheet">
-    <link href="./theme/pygments.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/local.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/pygments.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate" title="luw2007-blog DEV" type="application/atom+xml">
+        <link href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate" title="luw2007-blog DEV" type="application/rss+xml">
 
 </head>
 
@@ -32,15 +32,15 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href=".">luw2007-blog <em>DEV<em></a>
+        <a class="brand" href="https://luw2007.github.io">luw2007-blog DEV</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-                    
-                            <li><a href="./pages/About.html">About me</a></li>
-                        </ul>
+
+            <li><a href="https://luw2007.github.io/pages/About.html">About me</a></li>
+        </ul>
         </div>
-        
+
     </div>
     </div>
 </div>
@@ -50,92 +50,92 @@
     <div class="row">
 
         <div class="span9">
-            <div class='article'>
+    <div class="article">
         <div class="content-title">
             <h1>莫工厂的面试题之一古诗横转</h1>
-            09-16-2011
+09-16-2011
 
-by <a class="url fn" href="./author/luw2007.html">luw2007</a>
- 
+by <a class="url fn" href="https://luw2007.github.io/author/luw2007.html">luw2007</a>
+
 
 
         </div>
-	
+
         <div><p>要求横转古诗输出，输出的结果请运行一下程序。</p>
-<div class="codehilite"><pre><span class="s-Atom">string</span> <span class="o">=</span> <span class="s-Atom">u</span><span class="s2">&quot;&quot;&quot;静夜思 李白</span>
+<div class="highlight"><pre><span></span><code><span class="s s-Atom">string</span> <span class="o">=</span> <span class="s s-Atom">u</span><span class="s2">&quot;&quot;&quot;静夜思 李白</span>
 <span class="s2">床前明月光，</span>
 <span class="s2">疑似地上霜。</span>
 <span class="s2">举头望明月，</span>
 <span class="s2">低头思故乡。</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
-<span class="s-Atom">list_s</span><span class="o">=</span><span class="p">[</span><span class="nv">L</span> <span class="s-Atom">for</span> <span class="nv">L</span> <span class="s-Atom">in</span> <span class="s-Atom">string</span><span class="p">.</span><span class="nf">splitlines</span><span class="p">()[</span><span class="s-Atom">::-</span><span class="m">1</span><span class="p">]]</span>
-<span class="s-Atom">row_num</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="s-Atom">len</span><span class="p">,</span><span class="s-Atom">list_s</span><span class="p">))</span>
-<span class="s-Atom">out</span><span class="o">=</span><span class="p">[[</span><span class="s-Atom">row</span><span class="p">[</span><span class="nv">L</span><span class="p">]</span> <span class="s-Atom">for</span> <span class="s-Atom">row</span> <span class="s-Atom">in</span> <span class="s-Atom">list_s</span><span class="p">]</span> <span class="s-Atom">for</span> <span class="nv">L</span> <span class="s-Atom">in</span> <span class="nf">xrange</span><span class="p">(</span><span class="s-Atom">row_num</span><span class="p">)]</span>
-<span class="s-Atom">print</span> <span class="s-Atom">&#39;\n&#39;</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="nv">U</span><span class="s-Atom">&#39;┊&#39;</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s-Atom">row</span><span class="p">)</span> <span class="s-Atom">for</span> <span class="s-Atom">row</span> <span class="s-Atom">in</span> <span class="s-Atom">out</span><span class="p">])</span>
-</pre></div></div>
-	
+
+<span class="s s-Atom">list_s</span><span class="o">=</span><span class="p">[</span><span class="nv">L</span> <span class="s s-Atom">for</span> <span class="nv">L</span> <span class="s s-Atom">in</span> <span class="s s-Atom">string</span><span class="p">.</span><span class="nf">splitlines</span><span class="p">()[</span><span class="o">::-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="s s-Atom">row_num</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="s s-Atom">len</span><span class="p">,</span><span class="s s-Atom">list_s</span><span class="p">))</span>
+<span class="s s-Atom">out</span><span class="o">=</span><span class="p">[[</span><span class="s s-Atom">row</span><span class="p">[</span><span class="nv">L</span><span class="p">]</span> <span class="s s-Atom">for</span> <span class="s s-Atom">row</span> <span class="s s-Atom">in</span> <span class="s s-Atom">list_s</span><span class="p">]</span> <span class="s s-Atom">for</span> <span class="nv">L</span> <span class="s s-Atom">in</span> <span class="nf">xrange</span><span class="p">(</span><span class="s s-Atom">row_num</span><span class="p">)]</span>
+<span class="s s-Atom">print</span> <span class="s s-Atom">&#39;\n&#39;</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="nv">U</span><span class="s s-Atom">&#39;┊&#39;</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">row</span><span class="p">)</span> <span class="s s-Atom">for</span> <span class="s s-Atom">row</span> <span class="s s-Atom">in</span> <span class="s s-Atom">out</span><span class="p">])</span>
+</code></pre></div></div>
+
         <hr>
-    	   
-        <h2>Comments</h2>
-	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="luw2007">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	    </div>
+
+    </div>
         </div>
-        
+
         <div class="span3">
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
                 Site
                 </li>
-            
-                <li><a href="./archives.html">Archives</a>
-                <li><a href="./tags.html">Tags</a>
-                <li><a href="http://luw2007.github.com/" rel="alternate">Atom feed</a></li>
-                                <li><a href="http://luw2007.github.com/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
-                            </ul>
-            </div>
+
+                <li><a href="https://luw2007.github.io/archives.html">Archives</a></li>
+                <li><a href="https://luw2007.github.io/tags.html">Tags</a></li>
 
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                                <li><a href="./category/dev.html">Dev</a></li>
-                                <li><a href="./category/blog.html">blog</a></li>
-                                <li><a href="./category/linux.html">linux</a></li>
-                                   
+
+                <li><a href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+                <li><a href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
+
             </ul>
             </div>
-            
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="https://luw2007.github.io/category/blog.html">blog</a></li>
+                <li><a href="https://luw2007.github.io/category/dev.html">Dev</a></li>
+                <li><a href="https://luw2007.github.io/category/linux.html">linux</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
                 Links
                 </li>
-            
-                            <li><a href="http://python.org">python</a></li>
-                            <li><a href="http://douban.com">douban.com</a></li>
-                            <li><a href="http://42qu.com">42qu.com</a></li>
-                        </ul>
-            </div>
-            
 
-            
-        </div>  
-    </div>     </div> 
+                <li><a href="https://python.org">Python</a></li>
+                <li><a href="https://douban.com">Douban</a></li>
+            </ul>
+            </div>
+
+
+
+        </div>
+    </div>     </div>
 <footer>
-<br />
-<p><a href=".">luw2007-blog <em>DEV<em></a> &copy; luw2007 2012</p>
+<br>
+<p><a href="https://luw2007.github.io">luw2007-blog DEV</a> &copy; luw2007 2013</p>
 </footer>
 
 </div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
- 
+
 </body>
 </html>

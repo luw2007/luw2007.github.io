@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>luw2007-blog <em>DEV<em></title>
+    <title>luw2007-blog DEV - stack</title>
     <meta name="description" content="">
     <meta name="author" content="luw2007">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="../theme/html5.js"></script>
-    <![endif]-->
 
     <!-- Le styles -->
-    <link href="../theme/bootstrap.min.css" rel="stylesheet">
-    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="../theme/local.css" rel="stylesheet">
-    <link href="../theme/pygments.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/local.css" rel="stylesheet">
+    <link href="https://luw2007.github.io/theme/pygments.css" rel="stylesheet">
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate" title="luw2007-blog DEV" type="application/atom+xml">
+        <link href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate" title="luw2007-blog DEV" type="application/rss+xml">
 
 </head>
 
@@ -32,15 +32,15 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="..">luw2007-blog <em>DEV<em></a>
+        <a class="brand" href="https://luw2007.github.io">luw2007-blog DEV</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-                    
-                            <li><a href="../pages/About.html">About me</a></li>
-                        </ul>
+
+            <li><a href="https://luw2007.github.io/pages/About.html">About me</a></li>
+        </ul>
         </div>
-        
+
     </div>
     </div>
 </div>
@@ -50,196 +50,197 @@
     <div class="row">
 
         <div class="span9">
-                
-
-        
 
 
-    <div class='article'>
+
+
+
+    <div class="article">
         <div class="content-title">
-            <a href="../python-class-stack.html"><h1>python实现一个Stack类</h1></a>
-            09-16-2011
+            <h1><a href="https://luw2007.github.io/python-class-stack.html">python实现一个Stack类</a></h1>
+09-16-2011
 
-by <a class="url fn" href="../author/luw2007.html">luw2007</a>
- 
+by <a class="url fn" href="https://luw2007.github.io/author/luw2007.html">luw2007</a>
 
 
- 
+
+
         </div>
-        
+
         <div><p>python 实现Stack类。</p>
 <p>之前网上也有不同的实现，但是不是感觉版本太老就是感觉写的不好。自己写了一个，请大家指教。</p>
-<div class="codehilite"><pre><span class="c1"># -*- coding:utf-8 -*-</span>
-<span class="n">class</span> <span class="n">Stack</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="s">&quot;&quot;&quot;</span>
-<span class="s">        Stack 类</span>
-<span class="s">    &quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="n">None</span><span class="p">):</span>
-        <span class="s">&quot;&quot;&quot;doc test</span>
-<span class="s">        &gt;&gt;&gt; s = Stack([1,2,3,4])</span>
-<span class="s">        &gt;&gt;&gt; s.pop()</span>
-<span class="s">        4</span>
-<span class="s">        &gt;&gt;&gt; s.count</span>
-<span class="s">        3</span>
-<span class="s">        &gt;&gt;&gt; e = Stack([1,2,3,4])</span>
-<span class="s">        &gt;&gt;&gt; s != e</span>
-<span class="s">        True</span>
-<span class="s">        &gt;&gt;&gt; s.push(4)</span>
-<span class="s">        &gt;&gt;&gt; s == e</span>
-<span class="s">        True</span>
-<span class="s">        &gt;&gt;&gt; s += e</span>
-<span class="s">        &gt;&gt;&gt; len(s)</span>
-<span class="s">        8</span>
-<span class="s">        &gt;&gt;&gt; s.clear()</span>
-<span class="s">        &gt;&gt;&gt; s.empty</span>
-<span class="s">        True</span>
-<span class="s">        &gt;&gt;&gt; s.top</span>
-<span class="s">        data is empty</span>
-<span class="s">        &quot;&quot;&quot;</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="o">[]</span>
-        <span class="k">if</span> <span class="n">other</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">None:</span>
-            <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stack</span><span class="p">):</span>
-                <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span>
-            <span class="n">elif</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">tuple</span><span class="p">,</span> <span class="n">set</span><span class="p">)):</span>
-                <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">self</span><span class="o">.</span><span class="n">data</span>  <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="o">-*-</span><span class="w"> </span><span class="nl">coding</span><span class="p">:</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="w"> </span><span class="o">-*-</span>
+<span class="k">class</span><span class="w"> </span><span class="n">Stack</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+<span class="ss">        Stack 类</span>
+<span class="ss">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="o">=</span><span class="k">None</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;doc test</span>
+<span class="ss">        &gt;&gt;&gt; s = Stack([1,2,3,4])</span>
+<span class="ss">        &gt;&gt;&gt; s.pop()</span>
+<span class="ss">        4</span>
+<span class="ss">        &gt;&gt;&gt; s.count</span>
+<span class="ss">        3</span>
+<span class="ss">        &gt;&gt;&gt; e = Stack([1,2,3,4])</span>
+<span class="ss">        &gt;&gt;&gt; s != e</span>
+<span class="ss">        True</span>
+<span class="ss">        &gt;&gt;&gt; s.push(4)</span>
+<span class="ss">        &gt;&gt;&gt; s == e</span>
+<span class="ss">        True</span>
+<span class="ss">        &gt;&gt;&gt; s += e</span>
+<span class="ss">        &gt;&gt;&gt; len(s)</span>
+<span class="ss">        8</span>
+<span class="ss">        &gt;&gt;&gt; s.clear()</span>
+<span class="ss">        &gt;&gt;&gt; s.empty</span>
+<span class="ss">        True</span>
+<span class="ss">        &gt;&gt;&gt; s.top</span>
+<span class="ss">        data is empty</span>
+<span class="ss">        &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="err">:</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="p">)</span><span class="err">:</span>
+<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">:</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="k">data</span>
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">tuple</span><span class="p">,</span><span class="w"> </span><span class="k">set</span><span class="p">))</span><span class="err">:</span>
+<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">:</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="w">            </span><span class="k">else</span><span class="err">:</span>
+<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">__repr__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">&quot;&lt;Stack: %s&gt;&quot;</span> <span class="nv">%</span> <span class="nv">str</span><span class="p">(</span><span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__repr__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="ss">&quot;&lt;Stack: %s&gt;&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">__len__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">len</span><span class="p">(</span><span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__len__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">__eq__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">self</span><span class="o">.</span><span class="n">__cast</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__eq__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">__cast</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">__getitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__getitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
 
-    <span class="n">def</span> <span class="n">__setitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__setitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span>
 
-    <span class="n">def</span> <span class="n">__delitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="n">del</span> <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__delitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">del</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">i</span><span class="o">]</span>
 
-    <span class="n">def</span> <span class="n">__add__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stack</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">self</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">raise</span> <span class="n">TypeError</span><span class="p">(</span><span class="s">&#39;unsupported operand type(s) for +: %s&#39;</span> <span class="nv">%</span><span class="err">(</span><span class="nv">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="s">&quot;__class__&quot;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)))</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__add__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="p">)</span><span class="err">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="k">data</span><span class="p">)</span>
+<span class="w">        </span><span class="k">else</span><span class="err">:</span>
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">TypeError</span><span class="p">(</span><span class="s1">&#39;unsupported operand type(s) for +: %s&#39;</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="ss">&quot;__class__&quot;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
 
-    <span class="n">def</span> <span class="n">__iadd__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stack</span><span class="p">):</span>
-            <span class="n">self</span><span class="o">.</span><span class="n">data</span> <span class="o">+=</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span>
-            <span class="k">return</span> <span class="n">self</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">raise</span> <span class="n">TypeError</span><span class="p">(</span><span class="s">&#39;unsupported operand type(s) for +=: %s&#39;</span> <span class="nv">%</span><span class="err">(</span><span class="nv">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="s">&quot;__class__&quot;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)))</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__iadd__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="p">)</span><span class="err">:</span>
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="k">data</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">self</span>
+<span class="w">        </span><span class="k">else</span><span class="err">:</span>
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">TypeError</span><span class="p">(</span><span class="s1">&#39;unsupported operand type(s) for +=: %s&#39;</span><span class="w"> </span><span class="o">%</span><span class="p">(</span><span class="n">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="ss">&quot;__class__&quot;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span>
 
-    <span class="n">def</span> <span class="n">__cast</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stack</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">other</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__cast</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="p">)</span><span class="err">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="k">data</span>
+<span class="w">        </span><span class="k">else</span><span class="err">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">other</span>
 
-    <span class="nv">@property</span>
-    <span class="n">def</span> <span class="n">top</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">self</span><span class="o">.</span><span class="n">empty:</span>
-            <span class="k">print</span> <span class="s">&#39;data is empty&#39;</span>
-            <span class="k">return</span> <span class="n">None</span>
-        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="nv">@property</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="k">top</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nl">empty</span><span class="p">:</span>
+<span class="w">            </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;data is empty&#39;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">None</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span>
 
-    <span class="nv">@property</span>
-    <span class="n">def</span> <span class="n">count</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">len</span><span class="p">(</span><span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">@property</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">)</span>
 
-    <span class="nv">@property</span>
-    <span class="n">def</span> <span class="n">empty</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">len</span><span class="p">(</span><span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="w">    </span><span class="nv">@property</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">empty</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
 
-    <span class="n">def</span> <span class="nb">push</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="nb">pop</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">self</span><span class="o">.</span><span class="n">empty:</span>
-            <span class="k">print</span> <span class="s">&#39;data is empty&#39;</span>
-            <span class="k">return</span> <span class="n">None</span>
-        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="nb">pop</span><span class="p">()</span>
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">pop</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nl">empty</span><span class="p">:</span>
+<span class="w">            </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;data is empty&#39;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">None</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">clear</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="o">[]</span>
-</pre></div></div>
-        <hr />
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">clear</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span>
+</code></pre></div></div>
+        <hr>
     </div>
-		
-            <div class="pagination">
+
+<div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="../tag/stack.html">1</a></li>
+    <li class="active"><a href="https://luw2007.github.io/tag/stack.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
 </ul>
-</div>    
- 
-  
+</div>
+
+
         </div>
-        
+
         <div class="span3">
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
                 Site
                 </li>
-            
-                <li><a href="../archives.html">Archives</a>
-                <li><a href="../tags.html">Tags</a>
-                <li><a href="http://luw2007.github.com/" rel="alternate">Atom feed</a></li>
-                                <li><a href="http://luw2007.github.com/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
-                            </ul>
-            </div>
+
+                <li><a href="https://luw2007.github.io/archives.html">Archives</a></li>
+                <li><a href="https://luw2007.github.io/tags.html">Tags</a></li>
 
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                                <li><a href="../category/dev.html">Dev</a></li>
-                                <li><a href="../category/blog.html">blog</a></li>
-                                <li><a href="../category/linux.html">linux</a></li>
-                                   
+
+                <li><a href="https://luw2007.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+                <li><a href="https://luw2007.github.io/feeds/all.rss.xml" rel="alternate">RSS feed</a></li>
+
             </ul>
             </div>
-            
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-                <li class="nav-header"> 
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="https://luw2007.github.io/category/blog.html">blog</a></li>
+                <li><a href="https://luw2007.github.io/category/dev.html">Dev</a></li>
+                <li><a href="https://luw2007.github.io/category/linux.html">linux</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
                 Links
                 </li>
-            
-                            <li><a href="http://python.org">python</a></li>
-                            <li><a href="http://douban.com">douban.com</a></li>
-                            <li><a href="http://42qu.com">42qu.com</a></li>
-                        </ul>
-            </div>
-            
 
-            
-        </div>  
-    </div>     </div> 
+                <li><a href="https://python.org">Python</a></li>
+                <li><a href="https://douban.com">Douban</a></li>
+            </ul>
+            </div>
+
+
+
+        </div>
+    </div>     </div>
 <footer>
-<br />
-<p><a href="..">luw2007-blog <em>DEV<em></a> &copy; luw2007 2012</p>
+<br>
+<p><a href="https://luw2007.github.io">luw2007-blog DEV</a> &copy; luw2007 2011</p>
 </footer>
 
 </div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
- 
+
 </body>
 </html>
